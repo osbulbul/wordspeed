@@ -1,0 +1,96 @@
+/**
+* #.# Container Styles
+*
+* This section is just for main wordspeed container.
+*/
+#wordspeed{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 999999;
+}
+
+#wordspeed.show{
+    display: block;
+}
+
+
+/**
+* #.# Form Styles
+*
+* This section is wordspeed form styles.
+*/
+#wordspeed-form{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+#wordspeed-form input{
+    display: block;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    border: 4px solid #ccc;
+    border-radius: 5px;
+    padding: 0 20px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    color: #444;
+    font-size: 18px;
+}
+
+
+/**
+* #.# Suggestions Styles
+*
+* This section is for suggestions panel styles.
+*/
+#wordspeed-suggestions{
+    display: none;
+    width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#wordspeed-suggestions.active{
+    display: block;
+}
+
+#wordspeed-suggestions .wordspeed-item{
+    display: block;
+    padding: 10px;
+}
+
+#wordspeed-suggestions .wordspeed-item.active{
+    background: #ccc;
+}
+
+#wordspeed-suggestions .name{
+    display: inline-block;
+    font-size: 18px;
+    color: #666;
+}
+
+#wordspeed-suggestions .wordspeed-item.active .name{
+    color: #000;
+}
+
+#wordspeed-suggestions .name::after{
+    display: inline-block;
+    content: "-";
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+#wordspeed-suggestions .desc{
+    display: inline-block;
+    font-size: 12px;
+}
