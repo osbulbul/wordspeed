@@ -17,17 +17,22 @@
     };
 
     document.onkeydown = function(e){
-        if(e.keyCode in keysMap){
-            keysMap[e.keyCode] = true;
-            if(keysMap[16] && keysMap[77]){
-                e.preventDefault();
-                document.getElementById("wordspeed").classList.add("show");
-                document.getElementById("wordspeed-input").focus();
-                isVisible = true;
+        console.log(keysMap, e.keyCode);
+        if(!isVisible){
+            if(e.keyCode in keysMap){
+                keysMap[e.keyCode] = true;
+                if(keysMap[16] && keysMap[77]){
+                    e.preventDefault();
+                    document.getElementById("wordspeed").classList.add("show");
+                    document.getElementById("wordspeed-input").focus();
+                    isVisible = true;
+                }
             }
-        } else if(e.keyCode == 27) {
-            document.getElementById("wordspeed").classList.remove("show");
-            isVisible = false;
+        } else {
+            if(e.keyCode == 27) {
+                document.getElementById("wordspeed").classList.remove("show");
+                isVisible = false;
+            } 
         }
     };
 
@@ -84,6 +89,9 @@
             } else {
                 $('#wordspeed-suggestions').addClass('active');
             }
+        } else {
+            keysMap[16] = false;
+            keysMap[77] = false;
         }
     };
 
