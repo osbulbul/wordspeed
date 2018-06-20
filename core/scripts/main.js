@@ -17,7 +17,6 @@
     };
 
     document.onkeydown = function(e){
-        console.log(keysMap, e.keyCode);
         if(!isVisible){
             if(e.keyCode in keysMap){
                 keysMap[e.keyCode] = true;
@@ -32,7 +31,7 @@
             if(e.keyCode == 27) {
                 document.getElementById("wordspeed").classList.remove("show");
                 isVisible = false;
-            } 
+            }
         }
     };
 
