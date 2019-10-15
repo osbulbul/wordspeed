@@ -8,6 +8,3 @@ Currently this plugin only supports navigation shortcuts. After install and acti
 
 ## installation
 You can download this repo as zip file and upload as a plugin to your WordPress installation.
-
-## credits
-Oguzhan Selcuk Bulbul - coderontheroad@gmail.com
